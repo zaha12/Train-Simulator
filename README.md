@@ -6,14 +6,14 @@ Cars are one of four types (Passenger, Social, Cargo, Miscellaneous), each with 
 Cars are always kept in sorted order by type, with newer cars placed after older ones of the same type.
 At each stop, every car's remaining stop count is decremented, cars that hit 0 are removed, a random number of new cars (1-5) are added,
 and a Social car is added automatically if there's a Passenger car but no Social car. The simulation ends after 20 stops or when the train is empty. 
-The linked list itself (LinkedList.hpp) is a general-purpose, templated doubly-linked list, independent of anything train-related.
+The linked list itself (LinkedList.hpp) is a general-purpose, templated doubly linked list, independent of anything train related.
 
 # Files: 
-main.cpp: Entry point; runs the simulation loop, generates and inserts cars, and prints output at each stop.
+main.cpp: runs the simulation loop, generates and inserts cars, and prints output at each stop.
 
 car.hpp: Car struct and helpers for converting car type numbers into names/letters.
 
-LinkedList.hpp: Header-only, templated doubly-linked list (LinkedList<T> / Node<T>), with head/tail/index insert, retrieve, remove, and search.
+LinkedList.hpp: templated doubly linked list (LinkedList<T> / Node<T>), with head/tail/index insert, retrieve, remove, and search.
 
 Makefile: Builds the exe executable, with warning flags and sanitizers enabled.
 
